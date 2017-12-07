@@ -7,6 +7,7 @@ module.exports = {
     migrations:{
 
     }
+
   },
 
 
@@ -15,7 +16,10 @@ module.exports = {
     connection:'postgres:localhost/bookshelf_test'
   },
 
-  production: {}
+  production: {
+    connection:process.env.DATABASE_URL,
+    client: 'pg'
+  }
 };
 
 
